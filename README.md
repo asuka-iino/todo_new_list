@@ -9,6 +9,7 @@ Things you may want to cover:
 ruby 2.5.1p57(2018-03-28 revision 63029)
 
 * System dependencies
+ (依存関係？)
 
 * Configuration
 
