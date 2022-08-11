@@ -5,10 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version  
 ruby 2.5.1p57(2018-03-28 revision 63029)
 
-* System dependencies
+* System dependencies  
  (依存関係？)
 
 * Configuration
@@ -23,5 +23,5 @@ ruby 2.5.1p57(2018-03-28 revision 63029)
 
 * Deployment instructions
 
-* ...
+CRUDの練習として(As CRUD practice)　...　　
 # school_task
