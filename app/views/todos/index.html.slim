@@ -1,0 +1,27 @@
+p#notice
+  = notice
+h1.ms-5
+  | Todos 
+/| Todosはどういう表記？
+h2
+= link_to 'New Todo', new_todo_path, class: 'btn btn-primary ms-5'
+table.table.ms-5
+  thead.thead-default
+    tr
+      th
+        | Task
+      th
+        | Deadline
+      th[colspan="3"]
+  tbody
+    - @todos.each do |todo|
+      tr
+        td
+          = todo.task
+        td
+          = todo.deadline
+        td
+          = link_to 'Edit', edit_todo_path(todo), class: 'btn btn-primary'
+        td
+          = link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ms-0'
+/0819 変更・削除ボタンの隙間削除、ymlファイルの編集でボタンの表示文字変更
