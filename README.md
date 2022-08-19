@@ -25,4 +25,5 @@ ruby 2.5.1p57(2018-03-28 revision 63029)
 
 CRUDの練習として、todoリストをscaffoldコマンドにて作成  
 Create a todo list with the scaffold command as a CRUD practice.　　
-# school_task
+
+school_taskをコピーして改造
