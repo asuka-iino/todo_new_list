@@ -1,3 +1,6 @@
+.nav.justify-content-end
+  =link_to '一覧へ戻る', todos_path, class: 'nav-link'
+
 = form_with(model: todo, local: true) do |form|
   - if todo.errors.any?
     #error_explanation
@@ -8,11 +11,15 @@
         - todo.errors.full_messages.each do |message|
           li
             = message
-  .field
-    = form.label :task
-    = form.text_field :task
-  .field
+
+  .field.ms-5
+    = form.label :task, id: 'task'
+    = form.text_field :task, style: "width:90%", class: 'form-control'
+  .field.ms-5
+    = form.label :description, id:'description'
+    = form.text_field :description, style: "width:90%", class: 'form-control'
+  .field.ms-5
     = form.label :deadline
-    = form.date_field :deadline
-  .actions
-    = form.submit
+    = form.date_field :deadline, style: "width:90%", class: 'form-control'
+  .actions.ms-5
+    = form.submit class: 'btn btn-primary'
