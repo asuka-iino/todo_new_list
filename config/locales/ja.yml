@@ -9,10 +9,13 @@ ja:
     models:
       todo: todoリスト
     attributes:
-      task:
+      todo:
         id: ID
-        task: やること
+        description: 詳細
+        task: 連絡 
+        Task: やること
         deadline: 締切
+        Deadline: 締切
         created_at: 登録日時
         updated_at: 更新日時
   date:

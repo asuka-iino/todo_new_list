@@ -1,19 +1,21 @@
-p#notice
+#notice
   = notice
 h1.ms-5
-  | Todos 
-/| Todosはどういう表記？
+  | 連絡一覧 
+/| Todosはどういう表記？ |のあとが文字列？
 h2
-= link_to 'New Todo', new_todo_path, class: 'btn btn-primary ms-5'
-table.table.ms-5
-  thead.thead-default
+= link_to '連絡を書く', new_todo_path, class: 'btn btn-primary ms-5'
+
+
+table.table.ms-5 style = "width:80%" 
+  thead
     tr
       th
-        | Task
+        | Name
       th
         | Deadline
       th[colspan="3"]
-  tbody
+  tbody 
     - @todos.each do |todo|
       tr
         td
@@ -21,7 +23,6 @@ table.table.ms-5
         td
           = todo.deadline
         td
-          = link_to 'Edit', edit_todo_path(todo), class: 'btn btn-primary'
-        td
-          = link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ms-0'
+          = link_to '変', edit_todo_path(todo), class: 'btn btn-primary me-0'
+          = link_to '削', todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ms-0'
 /0819 変更・削除ボタンの隙間削除、ymlファイルの編集でボタンの表示文字変更
